@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mata Moscas</title>
+
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body onresize="windowResize()">
+    <div id="startMenu">
+        <div class="header">
+            <h1>Frogo <br>The Frog</h1>
+        </div>
+        <div class="btn-content">
+            <button class="btn start" onclick="startGame()">Começar</button>
+        </div>
+        <div class="btn-content">
+            <button class="btn disable" onclick="loadGame()">Carregar jogo</button>
+        </div>
+        <div class="btn-content">
+            <button class="btn" onclick="leaveGame()">Sair</button>
+        </div>
+    </div>
+    <div class="custom-menu" id="customFrog"></div>
+    <div class="pause-content" id="pauseBtn">
+        <div class="bar-content">
+            <div class="bar-pause"></div>
+            <div class="bar-pause"></div>
+        </div>
+    </div>
+    <div class="end-game" id="endMenu">
+        <h1>Você perdeu...</h1>
+        <h2>Pontuação final: <span id="pointEnd">99</span></h2>
+        <div class="btn-content">
+            <button class="btn" onclick="resetGame()">Reiniciar</button>
+        </div>
+    </div>
+    <div class="game-content">
+        <div class="placar" id="placarHead">
+            <h2 id="points">0 Moscas mortas</h2>
+        </div>
+        <div class="frog" id="frogTongue"><img src="img/frog.png" alt=""></div>
+    </div>
+    <div id="mosquitoNet"></div>
+    <script src="js/main_app.js"></script>
+</body>
+</html>
